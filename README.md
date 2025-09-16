@@ -74,9 +74,20 @@ blog-website/
 3. **Lọc theo danh mục**: Click vào các danh mục
 4. **Xem chi tiết**: Click vào bài viết để xem nội dung đầy đủ
 
-## 🌐 Demo
+## 🌐 Demo và Deployment
 
-Xem demo tại: [GitHub Pages](https://xuanthu18.github.io/blog-website/)
+### Truy cập trang web
+- Repository: https://github.com/XuanThu18/blog-website
+- Demo GitHub Pages: https://xuanthu18.github.io/blog-website/
+
+### Cách kích hoạt GitHub Pages
+1. Vào Settings của repository
+2. Chọn Pages từ menu bên trái
+3. Trong Source, chọn "Deploy from a branch"
+4. Chọn branch "main" và folder "/" (root)
+5. Click Save
+6. Đợi vài phút để GitHub Pages build và deploy
+7. Truy cập trang web tại: https://xuanthu18.github.io/blog-website/
 
 ## 👤 Tác giả
 

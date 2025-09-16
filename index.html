@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - Chia sẻ kiến thức</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-blog"></i>
+                <span>My Blog</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Trang chủ</a>
+                <a href="#categories" class="nav-link">Danh mục</a>
+                <a href="#about" class="nav-link">Về tôi</a>
+                <a href="#contact" class="nav-link">Liên hệ</a>
+                <button class="btn-primary" id="newPostBtn">
+                    <i class="fas fa-pen"></i> Viết bài
+                </button>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Chào mừng đến với Blog của tôi</h1>
+            <p class="hero-subtitle">Nơi chia sẻ kiến thức, kinh nghiệm và những câu chuyện thú vị</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm bài viết...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <h2>Danh mục</h2>
+            <div class="categories" id="categoriesList">
+                <span class="category active" data-category="all">Tất cả</span>
+                <span class="category" data-category="technology">Công nghệ</span>
+                <span class="category" data-category="lifestyle">Đời sống</span>
+                <span class="category" data-category="travel">Du lịch</span>
+                <span class="category" data-category="food">Ẩm thực</span>
+                <span class="category" data-category="education">Giáo dục</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Blog Posts -->
+                <div class="posts-container">
+                    <h2 class="section-title">Bài viết mới nhất</h2>
+                    <div id="postsGrid" class="posts-grid">
+                        <!-- Posts will be loaded here -->
+                    </div>
+                    <div id="loadingIndicator" class="loading">
+                        <i class="fas fa-spinner fa-spin"></i> Đang tải...
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- About Widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">Về tác giả</h3>
+                        <div class="author-card">
+                            <img src="https://via.placeholder.com/100" alt="Author" class="author-avatar">
+                            <h4>Nguyễn Văn A</h4>
+                            <p>Blogger chia sẻ kiến thức và kinh nghiệm về công nghệ, cuộc sống và nhiều lĩnh vực khác.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Posts Widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">Bài viết phổ biến</h3>
+                        <div id="popularPosts" class="popular-posts">
+                            <!-- Popular posts will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">Tags</h3>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Web Development</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Design</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- New Post Modal -->
+    <div id="newPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tạo bài viết mới</h2>
+            <form id="newPostForm">
+                <div class="form-group">
+                    <label for="postTitle">Tiêu đề</label>
+                    <input type="text" id="postTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="postCategory">Danh mục</label>
+                    <select id="postCategory" required>
+                        <option value="technology">Công nghệ</option>
+                        <option value="lifestyle">Đời sống</option>
+                        <option value="travel">Du lịch</option>
+                        <option value="food">Ẩm thực</option>
+                        <option value="education">Giáo dục</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="postImage">URL Hình ảnh</label>
+                    <input type="text" id="postImage" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-group">
+                    <label for="postExcerpt">Tóm tắt</label>
+                    <textarea id="postExcerpt" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Nội dung (Hỗ trợ Markdown)</label>
+                    <textarea id="postContent" rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="postTags">Tags (phân cách bằng dấu phẩy)</label>
+                    <input type="text" id="postTags" placeholder="tag1, tag2, tag3">
+                </div>
+                <button type="submit" class="btn-primary">Đăng bài</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Post Detail Modal -->
+    <div id="postDetailModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <article id="postDetail" class="post-detail">
+                <!-- Post detail will be loaded here -->
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>My Blog</h3>
+                    <p>Nơi chia sẻ kiến thức và trải nghiệm</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#about">Về tôi</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                        <li><a href="#privacy">Chính sách</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Theo dõi</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 My Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="public/js/blog-static.js"></script>
+</body>
+</html>

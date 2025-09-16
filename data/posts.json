@@ -1,0 +1,68 @@
+[
+  {
+    "id": 4,
+    "title": "abc",
+    "category": "technology",
+    "author": "Người dùng",
+    "date": "2025-09-16",
+    "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800",
+    "excerpt": "ádafdfsdf",
+    "content": "dsfsdfsda",
+    "tags": [
+      ""
+    ],
+    "views": 1,
+    "likes": 0
+  },
+  {
+    "id": 1,
+    "title": "Hướng dẫn học lập trình web từ cơ bản đến nâng cao",
+    "category": "technology",
+    "author": "Nguyễn Văn A",
+    "date": "2024-01-15",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+    "excerpt": "Trong bài viết này, tôi sẽ chia sẻ lộ trình học lập trình web hiệu quả nhất cho người mới bắt đầu...",
+    "content": "# Hướng dẫn học lập trình web từ cơ bản đến nâng cao\n\n## 1. Tại sao nên học lập trình web?\n\nLập trình web là một trong những lĩnh vực công nghệ phát triển nhanh nhất hiện nay. Với sự bùng nổ của internet và các thiết bị di động, nhu cầu về các ứng dụng web ngày càng tăng cao.\n\n## 2. Lộ trình học tập\n\n### 2.1. HTML & CSS (2-4 tuần)\n- Học cấu trúc HTML cơ bản\n- CSS styling và layout\n- Responsive design với Flexbox và Grid\n\n### 2.2. JavaScript (4-6 tuần)\n- Cú pháp cơ bản\n- DOM manipulation\n- Event handling\n- ES6+ features\n\n### 2.3. Framework (6-8 tuần)\n- React, Vue hoặc Angular\n- State management\n- Routing\n- API integration\n\n## 3. Tài nguyên học tập\n\n- **MDN Web Docs**: Tài liệu chính thức và chi tiết nhất\n- **FreeCodeCamp**: Khóa học miễn phí với chứng chỉ\n- **YouTube**: Nhiều kênh chất lượng như Traversy Media, Web Dev Simplified\n\n## 4. Dự án thực tế\n\nSau khi học xong lý thuyết, hãy thực hành với các dự án:\n1. Portfolio website\n2. Todo app\n3. Blog platform\n4. E-commerce site\n\n> \"The only way to learn programming is by writing programs\" - Brian Kernighan",
+    "tags": [
+      "JavaScript",
+      "Web Development",
+      "Programming"
+    ],
+    "views": 1251,
+    "likes": 89
+  },
+  {
+    "id": 2,
+    "title": "10 địa điểm du lịch không thể bỏ qua ở Việt Nam",
+    "category": "travel",
+    "author": "Trần Thị B",
+    "date": "2024-01-14",
+    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800",
+    "excerpt": "Việt Nam sở hữu nhiều cảnh đẹp tuyệt vời từ núi rừng đến biển đảo. Cùng khám phá 10 địa điểm du lịch hấp dẫn nhất...",
+    "content": "# 10 địa điểm du lịch không thể bỏ qua ở Việt Nam\n\nViệt Nam là đất nước có nhiều cảnh đẹp thiên nhiên và di sản văn hóa phong phú...",
+    "tags": [
+      "Travel",
+      "Vietnam",
+      "Tourism"
+    ],
+    "views": 894,
+    "likes": 67
+  },
+  {
+    "id": 3,
+    "title": "Công thức nấu ăn: Phở bò truyền thống",
+    "category": "food",
+    "author": "Lê Văn C",
+    "date": "2024-01-13",
+    "image": "https://images.unsplash.com/photo-1555126634-323283e090fa?w=800",
+    "excerpt": "Phở là món ăn truyền thống nổi tiếng của Việt Nam. Hôm nay tôi sẽ chia sẻ công thức nấu phở bò ngon như ngoài hàng...",
+    "content": "# Công thức nấu Phở bò truyền thống\n\n## Nguyên liệu cần chuẩn bị\n- 2kg xương ống bò\n- 500g nạm bò\n- 500g gầu bò...",
+    "tags": [
+      "Food",
+      "Vietnamese Cuisine",
+      "Recipe"
+    ],
+    "views": 543,
+    "likes": 45
+  }
+]
